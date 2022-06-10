@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My super cv</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <div class="allblog">
@@ -113,15 +113,17 @@
                     <h3>Code exemple</h3>
                     <pre>
                         <code>
-                            let arr = [10, 20, 30, 50, 235, 3000];
-
-        for( let i = 0; i <= arr.length -1; i++){
-            let num = String(arr[i]);
-            let char = num[0];
-            if (char == 1 || char == 2 || char == 5){
-                console.log(num);
-            }
-        }
+                list.addEventListener('click', function(event) {
+                    if(event.target.matches('li')){
+                        event.target.textContent += '!';
+                    }
+                
+                    if(event.target.matches('ul')){
+                        let item = document.createElement('li');
+                        item.innerHTML = 'item';
+                        event.target.appendChild(item);
+                    }
+                });
                         </code>
                     </pre>
                 </section>
